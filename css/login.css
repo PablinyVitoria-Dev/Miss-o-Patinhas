@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&family=Sarala:wght@400;700&display=swap');
+
+* {
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: aquamarine; 
+  display: flex;
+  justify-content: center; /* Posiciona o elemento na horinzontal*/
+}
+
+main{
+background-color: blueviolet; /*cor de fundo */
+height: 100vh;   /* altura da Viewport */
+display: flex; /* Deixa os elementos filhos um do lado do outro*/
+max-width: 1400px; /* Determina o maximo da largura */
+width: 100%;
+align-items: center;
+justify-content: space-between;  /* Faz espaçamento entre elementos*/
+}
+
+.imagem-login img {
+  background-color: black;
+  max-width: 600px;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 32px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+form h4 {
+  font-size: 18px;
+  font-weight: 400; /* peso da fonte grossa- fina*/
+}
+
+.input-box {
+  margin-bottom:20px;
+}
+
+.input-box div{
+border:1px solid #FFDCC9;
+border-radius: 8px;
+display: flex;
+padding: 0 8px;
+align-items: center; /* posicionar o elemnto na vertical*/
+background-color:rgba(255, 220, 201,0.45) ;
+}
+
+.input-box div input{
+  width: 100%;
+  /* background-color: blue; */
+  border: 0px;
+  padding: 8px 0;
+  margin-left: 5px;
+  background-color: transparent; 
+}
+
+.input-box label{
+color: #B2581D;
+font-size: 18px;
+font-weight: 400px;
+}
+
+form h4 {
+  margin-bottom: 15px;
+}
+
+.login {
+  width:100%;
+  height: 50px;
+  background-color:#D1814C;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.login:hover {
+  background-color: rgba(255,255,255,.2) ;
+  border: 3px solid rgba (255,255,255,.2);
+  color: #ffffff;
+}
