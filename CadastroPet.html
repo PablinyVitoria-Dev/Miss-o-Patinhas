@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro – Missão Patinhas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 110">
+    <g fill="#5B8A5F"><ellipse cx="16" cy="26" rx="9" ry="10"/><ellipse cx="38" cy="12" rx="9" ry="10"/><ellipse cx="62" cy="12" rx="9" ry="10"/><ellipse cx="84" cy="26" rx="9" ry="10"/></g>
+    <path d="M50 108C20 80 10 62 14 46c4-14 24-18 36-6 12-12 32-8 36 6 4 16-6 34-36 62z" fill="#1F5A3E"/>
+    <path d="M50 78C34 64 30 56 34 49c3-6 11-7 16-1 5-6 13-5 16 1 4 7 0 15-16 29z" fill="#fff"/>
+  </symbol>
+  <symbol id="paw" viewBox="0 0 100 100">
+    <g fill="currentColor"><ellipse cx="14" cy="42" rx="11" ry="14" transform="rotate(-20 14 42)"/><ellipse cx="36" cy="20" rx="11" ry="15"/><ellipse cx="64" cy="20" rx="11" ry="15"/><ellipse cx="86" cy="42" rx="11" ry="14" transform="rotate(20 86 42)"/><path d="M50 44c-16 0-30 18-30 32 0 10 8 14 18 12 8-2 8-3 12-3s4 1 12 3c10 2 18-2 18-12 0-14-14-32-30-32z"/></g>
+  </symbol>
+  <symbol id="paw-o" viewBox="0 0 100 100">
+    <g fill="none" stroke="currentColor" stroke-width="4"><ellipse cx="14" cy="42" rx="10" ry="13" transform="rotate(-20 14 42)"/><ellipse cx="36" cy="20" rx="10" ry="14"/><ellipse cx="64" cy="20" rx="10" ry="14"/><ellipse cx="86" cy="42" rx="10" ry="13" transform="rotate(20 86 42)"/><path d="M50 44c-16 0-30 18-30 32 0 10 8 14 18 12 8-2 8-3 12-3s4 1 12 3c10 2 18-2 18-12 0-14-14-32-30-32z"/></g>
+  </symbol>
+  <symbol id="pin" viewBox="0 0 40 52">
+    <path d="M20 50C6 34 2 28 2 20 2 9 10 2 20 2s18 7 18 18c0 8-4 14-18 30z" fill="#1F5A3E"/><circle cx="20" cy="19" r="7" fill="#fff"/>
+  </symbol>
+</svg>
+
+    <header class="topo">
+        <a class="marca" href="index.html">
+            <svg class="marca__logo"><use href="#logo"/></svg>
+            <span>Missão Patinhas</span>
+        </a>
+        <nav class="menu" aria-label="Principal">
+            <a href="#">Início</a>
+            <a href="#">Mural</a>
+            <a href="index.html" class="ativo" aria-current="page">Cadastro</a>
+            <a href="#">Detalhes do Animal</a>
+        </nav>
+        <svg class="topo__pata"><use href="#paw"/></svg>
+    </header>
+
+    <main class="pagina">
+        <svg class="deco pin d1"><use href="#pin"/></svg>
+        <svg class="deco pin d2"><use href="#pin"/></svg>
+        <svg class="deco pin d3"><use href="#pin"/></svg>
+        <svg class="deco pata p1"><use href="#paw-o"/></svg>
+        <svg class="deco pata p2"><use href="#paw-o"/></svg>
+        <svg class="deco pata p3"><use href="#paw-o"/></svg>
+        <svg class="deco pata p4"><use href="#paw-o"/></svg>
+
+        <div class="titulo">
+            <h1>CADASTRO</h1>
+            <p>Publique um animal perdido ou encontrado e ajude a reunir mais histórias felizes.</p>
+        </div>
+
+        <form id="form" class="form" novalidate>
+            <div class="campo foto">
+                <span class="rotulo rotulo--laranja">Foto do animal</span>
+                <label class="upload" id="upload" tabindex="0">
+        <input type="file" id="foto" accept="image/jpeg,image/png" hidden>
+        <img id="previa" alt="Prévia da foto do animal" hidden>
+        <div class="upload__texto" id="uploadTexto">
+          <svg width="52" height="42" viewBox="0 0 52 42" fill="none"><rect x="2" y="8" width="48" height="32" rx="7" fill="#fff"/><path d="M17 8l3-6h12l3 6z" fill="#fff"/><circle cx="26" cy="24" r="8" stroke="#EDBA8C" stroke-width="3"/></svg>
+          <p>Clique para adicionar<br>uma foto do animal</p>
+          <small>JPG ou PNG<br>Máx. 5 MB</small>
+        </div>
+      </label>
+                <small class="erro" id="erro-foto"></small>
+            </div>
+
+            <div class="campo nome">
+                <label class="rotulo rotulo--laranja" for="nome">Nome do animal</label>
+                <input class="entrada entrada--pessego" id="nome" name="nome" type="text" placeholder="Ex: Thor" maxlength="40" autocomplete="off">
+                <small class="erro" id="erro-nome"></small>
+            </div>
+
+            <div class="campo situacao">
+                <label class="rotulo rotulo--laranja" for="situacao">Situação</label>
+                <select class="entrada entrada--pessego" id="situacao" name="situacao">
+        <option value="" disabled selected>Ex: Selecione a situação</option>
+        <option>Perdido</option>
+        <option>Encontrado</option>
+      </select>
+                <small class="erro" id="erro-situacao"></small>
+            </div>
+
+            <div class="campo especie">
+                <label class="rotulo rotulo--laranja" for="especie">Espécie</label>
+                <select class="entrada entrada--pessego" id="especie" name="especie">
+        <option value="" disabled selected>Ex: Selecione a espécie</option>
+        <option>Cachorro</option>
+        <option>Gato</option>
+        <option>Ave</option>
+        <option>Outro</option>
+      </select>
+                <small class="erro" id="erro-especie"></small>
+            </div>
+
+            <div class="campo caract">
+                <label class="rotulo rotulo--laranja" for="caract">Características</label>
+                <textarea class="entrada entrada--pessego" id="caract" name="caract" rows="4" maxlength="400" placeholder="Descreva como ele é, cor da pelagem, porte, sinais particulares..."></textarea>
+                <small class="erro" id="erro-caract"></small>
+            </div>
+
+            <div class="campo regiao">
+                <label class="rotulo" for="regiao">Região onde foi visto</label>
+                <div class="entrada entrada--verde">
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="#fff" stroke-width="2.5"><path d="M17 3a9 9 0 0 0-9 9c0 7 9 15 9 15s9-8 9-15a9 9 0 0 0-9-9z"/><circle cx="17" cy="12" r="3.5"/><ellipse cx="17" cy="29" rx="9" ry="2.5"/></svg>
+                    <input id="regiao" name="regiao" type="text" placeholder="Ex: São Paulo - SP" autocomplete="off">
+                </div>
+                <small class="erro" id="erro-regiao"></small>
+            </div>
+
+            <div class="campo data">
+                <label class="rotulo" for="data">Data</label>
+                <div class="entrada entrada--verde centro">
+                    <input id="data" name="data" type="text" placeholder="Selecione a data" onfocus="this.type='date'" onblur="if(!this.value)this.type='text'">
+                </div>
+                <small class="erro" id="erro-data"></small>
+            </div>
+
+            <div class="campo contato">
+                <label class="rotulo" for="contato">Contato</label>
+                <div class="entrada entrada--verde">
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="#fff"><path d="M9 4h5l2 7-3 2c1.5 3.5 4.500 6.500 8 8l2-3 7 2v5c0 2-1.500 3-3 3C15 28 6 19 6 7c0-2 1.500-3 3-3z"/></svg>
+                    <input id="contato" name="contato" type="tel" placeholder="Ex: (11) 98765-4321" maxlength="15" inputmode="numeric" autocomplete="off">
+                </div>
+                <small class="erro" id="erro-contato"></small>
+            </div>
+
+            <button type="submit" class="publicar">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="#fff"><path d="M3 19L37 3 29 37 20 25 14 33v-11L33 8 13 20z"/></svg>
+      Publicar animal
+    </button>
+        </form>
+    </main>
+
+    <footer class="rodape">
+        <a class="marca marca--rodape" href="index.html">
+            <svg class="marca__logo"><use href="#logo"/></svg>
+            <span>Missão<br>Patinhas</span>
+        </a>
+    </footer>
+
+    <div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

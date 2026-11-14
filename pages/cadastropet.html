@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Animal - Missão Patinhas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABEÇALHO (Mesmo padrão da Home) -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="text-decoration: none;"> Missão Patinhas</a>
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="index.html#adocao">Adoção</a>
+                <a href="cadastro-animal.html" class="btn-nav">Cadastrar Pet</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ÁREA DO FORMULÁRIO -->
+    <main class="form-section">
+        <div class="container">
+            <div class="form-card">
+                <div class="form-header">
+                    <h2>Cadastrar Novo Pet</h2>
+                    <p>Preencha as informações abaixo para disponibilizar um animalzinho para adoção.</p>
+                </div>
+
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    
+                    <!-- LINHA 1: Nome e Espécie -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome">Nome do Pet *</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ex: Thor, Mel..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="especie">Espécie *</label>
+                            <select id="especie" name="especie" required>
+                                <option value="">Selecione...</option>
+                                <option value="cachorro">Cachorro</option>
+                                <option value="gato">Gato</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- LINHA 2: Idade, Porte e Sexo -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="idade">Idade Aproximada *</label>
+                            <input type="text" id="idade" name="idade" placeholder="Ex: 6 meses, 2 anos..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="porte">Porte *</label>
+                            <select id="porte" name="porte" required>
+                                <option value="">Selecione...</option>
+                                <option value="pequeno">Pequeno</option>
+                                <option value="medio">Médio</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sexo">Sexo *</label>
+                            <select id="sexo" name="sexo" required>
+                                <option value="">Selecione...</option>
+                                <option value="macho">Macho</option>
+                                <option value="femea">Fêmea</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- CHECKBOXES DE SAÚDE -->
+                    <div class="form-group">
+                        <label>Cuidados Veterinários</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="castrado" value="sim"> Castrado
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="vacinado" value="sim"> Vacinado
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="vermifugado" value="sim"> Vermifugado
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- UPLOAD DE FOTO -->
+                    <div class="form-group">
+                        <label for="foto">Foto do Pet *</label>
+                        <input type="file" id="foto" name="foto" accept="image/*" class="file-input" required>
+                    </div>
+
+                    <!-- DESCRIÇÃO / HISTÓRIA -->
+                    <div class="form-group">
+                        <label for="descricao">História e Temperamento *</label>
+                        <textarea id="descricao" name="descricao" rows="4" placeholder="Conte um pouco sobre a personalidade do pet, se se dá bem com crianças ou outros animais..." required></textarea>
+                    </div>
+
+                    <!-- BOTÕES -->
+                    <div class="form-actions">
+                        <a href="index.html" class="btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn-primary">Salvar Cadastro</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Missão Patinhas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/Cadastropet.js"></script>
+</body>
+
+</html>
