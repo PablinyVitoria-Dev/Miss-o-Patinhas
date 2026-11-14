@@ -76,19 +76,20 @@ form h4 {
 }
 
 .login {
-  width:100%;
+  width: 100%;
   height: 50px;
-  background-color:#D1814C;
+  background-color: #D1814C;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-size: 18px;
   color: #ffffff;
   font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .login:hover {
-  background-color: rgba(255,255,255,.2) ;
-  border: 3px solid rgba (255,255,255,.2);
-  color: #ffffff;
+  background-color: rgba(209, 129, 76, 0.2);
+  border: 3px solid #D1814C;
+  color: #D1814C;
 }

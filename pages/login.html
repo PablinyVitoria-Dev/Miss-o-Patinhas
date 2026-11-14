@@ -11,36 +11,56 @@
 
     <title>Login</title>
   </head>
+
   <body>
     <main class="container">
-      <div class="imagem-login">
-        <img src="../assets/icons/ImagemLogin.png" alt="" />
-      </div>
+      <section class="imagem-login">
+        <img src="../assets/icons/ImagemLogin.png" alt="Imagem de login" />
+      </section>
 
-      <form>
-        <h1>Seja Bem-Vindo!</h1>
-        <h4>Entre na sua conta para continuar</h4>
-        <div class="input-box email">
-          <label for="">E-mail</label>
-          <div>
-            <i class="bx bxs-user"></i>
-            <input placeholder="E-mail" type="email" />
-          </div>
-        </div>
-        <div class="input-box senha">
-          <label for="">Senha</label>
-          <div>
-            <i class="bx bxs-lock-alt"></i>
-            <input placeholder="Senha" type="password" />
-          </div>
-        </div>
+      <section aria-labelledby="titulo-login">
+        <form>
+          <header>
+            <h1 id="titulo-login">Seja Bem-Vindo!</h1>
+            <h4>Entre na sua conta para continuar</h4>
+          </header>
 
-        <button type="submit" class="login">Entrar</button>
-        <div class="register-link">
-          <p>Não tem conta? <a href="./cadastrologin.html">Cadastre-se</a></p>
-          <p></p>
-        </div>
-      </form>
+          <div class="input-box email">
+            <label for="email">E-mail</label>
+            <div>
+              <i class="bx bxs-user" aria-hidden="true"></i>
+              <input
+                id="email"
+                name="email"
+                placeholder="E-mail"
+                type="email"
+              />
+            </div>
+          </div>
+
+          <div class="input-box senha">
+            <label for="senha">Senha</label>
+            <div>
+              <i class="bx bxs-lock-alt" aria-hidden="true"></i>
+              <input
+                id="senha"
+                name="senha"
+                placeholder="Senha"
+                type="password"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="login">Entrar</button>
+
+          <footer class="register-link">
+            <p>
+              Não tem conta?
+              <a href="./cadastrologin.html">Cadastre-se</a>
+            </p>
+          </footer>
+        </form>
+      </section>
     </main>
   </body>
 </html>
