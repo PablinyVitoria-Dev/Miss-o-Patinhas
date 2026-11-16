@@ -2,39 +2,37 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../css/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-
     <title>Login</title>
   </head>
 
   <body>
     <main class="container">
       <section class="imagem-login">
-        <img src="../assets/icons/ImagemLogin.png" alt="Imagem de login" />
+        <img
+          src="../assets/icons/ImagemLogin.png"
+          alt="Ilustração da tela de login"
+        />
       </section>
 
       <section aria-labelledby="titulo-login">
-        <form>
-          <header>
+        <form action="#" method="post">
+          <div class="form-header">
             <h1 id="titulo-login">Seja Bem-Vindo!</h1>
-            <h4>Entre na sua conta para continuar</h4>
-          </header>
+            <p>Entre na sua conta para continuar</p>
+          </div>
 
           <div class="input-box email">
             <label for="email">E-mail</label>
             <div>
               <i class="bx bxs-user" aria-hidden="true"></i>
-              <input
-                id="email"
-                name="email"
-                placeholder="E-mail"
-                type="email"
-              />
+              <input id="email" name="email" placeholder="E-mail" type="email" autocomplete="email"
+                required />
             </div>
           </div>
 
@@ -42,23 +40,18 @@
             <label for="senha">Senha</label>
             <div>
               <i class="bx bxs-lock-alt" aria-hidden="true"></i>
-              <input
-                id="senha"
-                name="senha"
-                placeholder="Senha"
-                type="password"
-              />
+              <input id="senha" name="senha" placeholder="Senha" type="password" autocomplete="current-password" required/>
             </div>
           </div>
 
           <button type="submit" class="login">Entrar</button>
 
-          <footer class="register-link">
+          <div class="register-link">
             <p>
               Não tem conta?
               <a href="./cadastrologin.html">Cadastre-se</a>
             </p>
-          </footer>
+          </div>
         </form>
       </section>
     </main>

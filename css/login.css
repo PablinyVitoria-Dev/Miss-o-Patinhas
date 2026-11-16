@@ -8,13 +8,17 @@
 }
 
 body {
-  background-color: aquamarine; 
+  /* background-color: ;  */
   display: flex;
   justify-content: center; /* Posiciona o elemento na horinzontal*/
+  background-image: url("../assets/icons/background.svg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 main{
-background-color: blueviolet; /*cor de fundo */
+/* background-color: #ffffff; cor de fundo */
 height: 100vh;   /* altura da Viewport */
 display: flex; /* Deixa os elementos filhos um do lado do outro*/
 max-width: 1400px; /* Determina o maximo da largura */
@@ -24,14 +28,21 @@ justify-content: space-between;  /* Faz espaçamento entre elementos*/
 }
 
 .imagem-login img {
-  background-color: black;
+  /* background-color: black; */
   max-width: 600px;
+  width: 100%;
 }
 
 form {
   background-color: #ffffff;
-  padding: 32px;
+  padding: 45px 35px;
+  border-radius: 30px;
+  max-width: 618px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(178, 88, 29, 0.25);
+transform: translateX(-190px);
 }
+
 
 h1 {
   font-size: 36px;
@@ -92,4 +103,19 @@ form h4 {
   background-color: rgba(209, 129, 76, 0.2);
   border: 3px solid #D1814C;
   color: #D1814C;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.register-link p{   /* botão de não tem conta*/
+  font-size: 16px;
+}
+
+.register-link a{   /* botão de cadastro*/
+  color: #D1814C;
+  text-decoration: none;
 }
