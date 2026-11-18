@@ -7,16 +7,23 @@
   --laranja-instagram: #d1814c;
   --branco: #ffffff;
   --rosa-claro: #fff0f0;
+  --barra-do-nav: #fff0e5;
+  --letras-meio-preta: #3f3f3f;
 }
 
 * {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
 .cabecalho {
   width: 100%;
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: var(--branco);
 }
 
 .menu {
@@ -25,6 +32,10 @@
   align-items: center;
   gap: 20px;
   width: 100%;
+  margin: 0;
+  padding: 8px 15px;
+  background-color: var(--barra-do-nav);
+  border-radius: 30px;
 }
 
 .logo {
@@ -58,7 +69,39 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  min-height: 500px;
   padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.formaLaranja {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.formaLaranja img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.inicioTexto {
+  position: relative;
+  z-index: 1;
+}
+
+.inicioImagens img {
+  position: relative;
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
 }
 
 .tituloInicio {
