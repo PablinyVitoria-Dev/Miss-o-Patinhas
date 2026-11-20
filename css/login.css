@@ -11,11 +11,13 @@ body {
   /* background-color: ;  */
   display: flex;
   justify-content: center; /* Posiciona o elemento na horinzontal*/
-  background-image: url("../assets/icons/background.svg");
+  background-image: url("../assets/icons/background\ \(1\).png");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
 }
+
+
 
 main{
 /* background-color: #ffffff; cor de fundo */
@@ -40,7 +42,7 @@ form {
   max-width: 618px;
   width: 100%;
   box-shadow: 0 10px 30px rgba(178, 88, 29, 0.25);
-transform: translateX(-190px);
+transform: translateX(-200px);
 }
 
 
@@ -118,4 +120,27 @@ form h4 {
 .register-link a{   /* botão de cadastro*/
   color: #D1814C;
   text-decoration: none;
+}
+
+.img {
+  position: absolute;
+  left: 0;
+  top: 340px;
+  width: 100px;
+  transform: translateX(40px);
+}
+
+.img1 {
+  position: absolute;
+  right: 120px;
+  top: 60px;
+  width: 120px;
+}
+
+.img2 {
+   position: absolute;
+  right: 40px;
+  top: 170px;
+  width: 100px;
+  transform: translateX(-820px);
 }
